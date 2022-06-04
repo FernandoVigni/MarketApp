@@ -3,11 +3,11 @@ package com.MarketApp.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Clients")
+@Table(name="clients")
 public class Client {
 
     @Id
-    @Column(name="Id_product")
+    @Column(name="id_client")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
 }
