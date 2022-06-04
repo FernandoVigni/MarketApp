@@ -3,9 +3,7 @@ package com.MarketApp.ClientControler;
 import com.MarketApp.entity.Client;
 import com.MarketApp.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,11 +20,11 @@ public class ClientControler {
     }
 
                             @GetMapping("/prueba")
-                            public void print(){
-                                System.out.println("Exito!");
+                            public String prueba(){
+                                return "Exito!";
                             }
-
-    public Client save(Client client){
+    @PostMapping("/save")
+    public Client save(@RequestBody Client client){
         return clientService.save(client);
     }
 
