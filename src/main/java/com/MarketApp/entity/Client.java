@@ -1,4 +1,4 @@
-package com.MarketApp;
+package com.MarketApp.entity;
 
 import javax.persistence.*;
 

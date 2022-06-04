@@ -1,6 +1,6 @@
 package com.MarketApp.services;
 
-import com.MarketApp.Client;
+import com.MarketApp.entity.Client;
 import com.MarketApp.persistence.entity.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

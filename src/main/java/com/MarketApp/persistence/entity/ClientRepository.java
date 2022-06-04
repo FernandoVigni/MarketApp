@@ -1,6 +1,6 @@
 package com.MarketApp.persistence.entity;
 
-import com.MarketApp.Client;
+import com.MarketApp.entity.Client;
 import com.MarketApp.crud.ClientCrudRepository;
 import org.springframework.stereotype.Repository;
 
