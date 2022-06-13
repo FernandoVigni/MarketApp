@@ -1,8 +1,7 @@
 package com.MarketApp.crud;
 
 import com.MarketApp.entity.Client;
-import org.springframework.data.repository.CrudRepository;
 
-public interface ClientCrudRepository extends CrudRepository<Client, Integer> {
+public interface ClientCrudRepository extends org.springframework.data.repository.CrudRepository<Client, Integer> {
 
 }
