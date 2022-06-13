@@ -36,4 +36,6 @@ public class ClientControler {
     public void delete(@PathVariable ("idClient") int idClient){
         clientService.delete(idClient);
     }
+
+
 }

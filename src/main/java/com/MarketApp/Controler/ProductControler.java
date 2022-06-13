@@ -21,13 +21,10 @@ public class ProductControler {
     @GetMapping("/all")
     public List<Product> getAll(){
         return productService.getAll();
-
     }
 
-    @GetMapping("/{idCategory}")
+    @GetMapping("/byCategory/{idCategory}")
     public List<Product> getByCategory(@PathVariable ("idCategory") int idCategory){
         return productService.getByCategory(idCategory);
-
     }
-
 }
