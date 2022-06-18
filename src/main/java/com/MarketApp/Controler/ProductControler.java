@@ -20,7 +20,8 @@ public class ProductControler {
 
     @GetMapping("/all")
     public List<Product> getAll(){
-        return productService.getAll();
+        List<Product> result = productService.getAll();
+        return result;
     }
 
     @GetMapping("/byCategory/{idCategory}")
