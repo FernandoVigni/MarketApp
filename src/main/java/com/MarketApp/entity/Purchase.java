@@ -3,11 +3,11 @@ package com.MarketApp.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="shopping")
+@Table(name="purchase")
 public class Purchase {
 
     @Id
-    @Column(name="id_shop")
+    @Column(name="id_purchase")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPurchase;
 
@@ -16,6 +16,16 @@ public class Purchase {
 
     @Column(name="payment_mode")
     private String paymentMode;
+
+    private double ammount;
+
+    public void setAmmount(double ammount) {
+        this.ammount = ammount;
+    }
+
+    public double getAmmount() {
+        return ammount;
+    }
 
     public int getIdPurchase() {
         return idPurchase;
