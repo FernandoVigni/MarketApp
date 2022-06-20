@@ -1,4 +1,4 @@
-package com.MarketApp.Controler;
+package com.MarketApp.controler;
 
 import com.MarketApp.entity.Purchase;
 import com.MarketApp.services.PurchaseService;
