@@ -24,6 +24,10 @@ public class PurchaseRepository {
         return purchaseCrudRepository.save(purchase);
     }
 
+    public void deleteById(int IdToDelete){
+        purchaseCrudRepository.deleteById(IdToDelete);
+    }
+
     public void deleteAll(){
         purchaseCrudRepository.deleteAll();
     }

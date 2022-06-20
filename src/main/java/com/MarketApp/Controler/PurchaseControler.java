@@ -3,6 +3,8 @@ package com.MarketApp.Controler;
 import com.MarketApp.entity.Purchase;
 import com.MarketApp.services.PurchaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,12 +28,17 @@ public class PurchaseControler {
     }
 
     @PostMapping("/save")
-    public Purchase save(Purchase purchase){
-        return purchaseService.save(purchase);
+    public ResponseEntity<Purchase> save(@RequestBody Purchase purchase){
+        return new ResponseEntity<>(purchaseService.save(purchase), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/deleteAll")
     public void delteAll(){
         purchaseService.deleteAll();
+    }
+
+    @DeleteMapping("/delete/{idToDelete}")
+    public void deleteById(@PathVariable ("idToDelete") int idToDelete){
+        purchaseService.deleteById(idToDelete);
     }
 }
