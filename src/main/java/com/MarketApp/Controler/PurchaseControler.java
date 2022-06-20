@@ -27,6 +27,16 @@ public class PurchaseControler {
         return purchaseService.findByIdPurchase(idPurchase);
     }
 
+    @GetMapping("/lessThan5000")
+    public Optional<List<Purchase>> findByAmmountLessThan(){
+        return purchaseService.findByAmmountLessThan();
+   }
+
+    @GetMapping("/moreThan5000")
+    public Optional<List<Purchase>> findByAmmountGreaterThan(){
+        return purchaseService.findByAmmountGreaterThan();
+    }
+
     @PostMapping("/save")
     public ResponseEntity<Purchase> save(@RequestBody Purchase purchase){
         return new ResponseEntity<>(purchaseService.save(purchase), HttpStatus.CREATED);

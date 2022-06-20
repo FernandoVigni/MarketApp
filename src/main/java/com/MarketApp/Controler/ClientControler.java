@@ -17,14 +17,14 @@ public class ClientControler {
     @Autowired
     private ClientService clientService;
 
-    @GetMapping("/{idClient}")
-    public Optional<Client> getClient(@PathVariable("idClient") int idClient){
-        return clientService.findById(idClient);
-    }
-
     @GetMapping("/all")
     public List<Client> getAll(){
         return clientService.getAll();
+    }
+
+    @GetMapping("/{idClient}")
+    public Optional<Client> getClient(@PathVariable("idClient") int idClient){
+        return clientService.findById(idClient);
     }
 
     @PostMapping("/save")
@@ -36,6 +36,4 @@ public class ClientControler {
     public void delete(@PathVariable ("idClient") int idClient){
         clientService.delete(idClient);
     }
-
-
 }

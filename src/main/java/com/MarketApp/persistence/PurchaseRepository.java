@@ -20,6 +20,14 @@ public class PurchaseRepository {
         return purchaseCrudRepository.findById(idPurchase);
     }
 
+    public Optional<List<Purchase>> findByAmmountLessThan(){
+        return purchaseCrudRepository.findByAmmountLessThan(5000);
+    }
+
+    public Optional<List<Purchase>> findByAmmountGreaterThan(){
+        return purchaseCrudRepository.findByAmmountGreaterThan(5000);
+    }
+
     public Purchase save(Purchase purchase){
         return purchaseCrudRepository.save(purchase);
     }
