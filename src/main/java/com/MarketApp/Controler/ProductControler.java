@@ -24,6 +24,11 @@ public class ProductControler {
         return result;
     }
 
+    @GetMapping("/{idProduct}")
+    public Optional<Product> getByIDProduct(@PathVariable ("idProduct") int idProduct) {
+        return productService.getByIDProduct(idProduct);
+    }
+
     @GetMapping("/byCategory/{idCategory}")
     public List<Product> getByCategory(@PathVariable ("idCategory") int idCategory){
         return productService.getByCategory(idCategory);

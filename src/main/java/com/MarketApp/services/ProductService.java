@@ -18,6 +18,10 @@ public class ProductService {
         return productRepository.getAll();
     }
 
+    public Optional<Product> getByIDProduct(int idProduct){
+        return productRepository.getByIDProduct(idProduct);
+    }
+
     public List<Product> getByCategory(int idCategory) {
         return productRepository.getByCategory(idCategory);
     }
