@@ -22,13 +22,13 @@ public class PurchaseService {
         return purchaseRepository.findByIdPurchase(idPurchase);
     }
 
-    public Optional<List<Purchase>> findByAmmountLessThan(){
-        return purchaseRepository.findByAmmountLessThan();
+    public Optional<List<Purchase>> findByAmmountLessThan5000(){
+        return purchaseRepository.findByAmmountLessThan5000();
     }
 
 
-    public Optional<List<Purchase>> findByAmmountGreaterThan(){
-        return purchaseRepository.findByAmmountGreaterThan();
+    public Optional<List<Purchase>> findByAmmountGreaterThan5000(){
+        return purchaseRepository.findByAmmountGreaterThan5000();
     }
 
     public Purchase save(Purchase purchase){

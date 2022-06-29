@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/purchase")
-public class PurchaseControler {
+public class PurchaseController {
 
     @Autowired
     private PurchaseService purchaseService;
@@ -27,14 +27,14 @@ public class PurchaseControler {
         return purchaseService.findByIdPurchase(idPurchase);
     }
 
-    @GetMapping("/lessThan5000")
-    public Optional<List<Purchase>> findByAmmountLessThan(){
-        return purchaseService.findByAmmountLessThan();
+    @GetMapping("/purchaseAmmountLessThan5000")
+    public Optional<List<Purchase>> findByAmmountLessThan5000(){
+        return purchaseService.findByAmmountLessThan5000();
    }
 
-    @GetMapping("/moreThan5000")
-    public Optional<List<Purchase>> findByAmmountGreaterThan(){
-        return purchaseService.findByAmmountGreaterThan();
+    @GetMapping("/purchaseAmmountGreaterThan5000")
+    public Optional<List<Purchase>> findByAmmountGreaterThan5000(){
+        return purchaseService.findByAmmountGreaterThan5000();
     }
 
     @PostMapping("/save")
