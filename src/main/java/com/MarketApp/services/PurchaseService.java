@@ -4,8 +4,6 @@ import com.MarketApp.entity.Purchase;
 import com.MarketApp.persistence.PurchaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.security.PublicKey;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,7 +23,6 @@ public class PurchaseService {
     public Optional<List<Purchase>> findByAmmountLessThan5000(){
         return purchaseRepository.findByAmmountLessThan5000();
     }
-
 
     public Optional<List<Purchase>> findByAmmountGreaterThan5000(){
         return purchaseRepository.findByAmmountGreaterThan5000();
