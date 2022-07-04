@@ -19,6 +19,11 @@ public class Product {
     private int stock;
     private boolean state;
 
+    @ManyToOne
+    @JoinColumn(name= "id_category", insertable = false, updatable = false)
+    private Category category;
+
+
     public int getIdProduct() {
         return idProduct;
     }
